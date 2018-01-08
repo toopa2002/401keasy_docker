@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+  db1:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: secret
+  db2:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: secret
+  
+  bucardo:
+    image: plgr/bucardo
+    volumes:
+      - ./bucardo:/media/bucardo
+    environment:
+      BUCARDO_DB3: secret
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

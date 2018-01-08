@@ -1,0 +1,23 @@
+{
+ "databases":[
+   {
+     "id": 1,
+     "dbname": "401keasy",
+     "host": "db1",
+     "user": "postgres",
+     "pass": "secret"
+   },{
+     "id": 2,
+     "dbname": "401keasy",
+     "host": "db2",
+     "user": "postgres",
+     "pass": "secret"
+   }],
+  "syncs" : [
+    {
+      "sources": [1],
+      "target": [2],
+      "tables": "client"
+    }
+  ]
+}
